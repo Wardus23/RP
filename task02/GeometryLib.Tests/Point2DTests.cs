@@ -5,14 +5,14 @@ namespace GeometryLib.Tests;
 public class Point2DTests
 {
     [Theory]
-    [MemberData(nameof(DistanceToTestData))]
-    public void DistanceTo_WithDifferentPoints(Point2D p1, Point2D p2, double expectedDistance)
+    [MemberData(nameof(DistanceToPointsParams))]
+    public void Can_calculate_distance_to_different_points(Point2D p1, Point2D p2, double expectedDistance)
     {
         double actualDistance = p1.DistanceTo(p2);
         Assert.Equal(expectedDistance, actualDistance, 5);
     }
 
-    public static TheoryData<Point2D, Point2D, double> DistanceToTestData()
+    public static TheoryData<Point2D, Point2D, double> DistanceToPointsParams()
     {
         return new TheoryData<Point2D, Point2D, double>
         {

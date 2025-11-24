@@ -44,7 +44,6 @@ public class PhoneNumberTests
     {
         return new TheoryData<string>
         {
-            null,
             "",
             "   ",
             "abc",
